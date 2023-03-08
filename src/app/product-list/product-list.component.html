@@ -1,0 +1,10 @@
+<h1>product-list works!</h1>
+<div *ngFor="let product of products"  style="display:flex; ">    
+    
+    <h2>{{product.id}}&nbsp;{{product.name}}</h2>
+    <img src={{product.image}} alt="images"  style="height:5% ; width: 5%;"/>
+    <p>{{product.description}}&nbsp;<strong>{{product.price}}</strong></p>
+
+
+</div>
+

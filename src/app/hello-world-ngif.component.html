@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello World: ngIf!</h2>
+
+<button type="button" (click)="onEditClick()">Make text editable!</button>
+
+<div *ngIf="canEdit; else noEdit">
+    <p>You can edit the following paragraph.</p>
+</div>
+
+<ng-template #noEdit>
+    <p>The following paragraph is read only. Try clicking the button!</p>
+</ng-template>
+
+<p [contentEditable]="canEdit">{{ message }}</p>
+</body>
+</html>
